@@ -24,10 +24,29 @@ html, body {
     display: grid;
 }
 
-.header {
+.header .container{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.header .container .header-nav-web {
+    display: flex;
+    gap: 32px;
+}
+
+.header .container .header-nav-mobile {
+    display: none;
+}
+
+.header .container .header-nav-web a {
+    text-decoration: none;
+    color: var(--color-sixth);
+}
+
+.header .container .header-nav-web a:hover {
+    color: var(--color-fifth);
+    transition: 1s ease-in .5s;
 }
 
 .header .header-logo {
@@ -42,6 +61,7 @@ html, body {
 .section .product-card {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 32px;
 }
 
@@ -151,5 +171,18 @@ html, body {
 
     .footer .footer-info {
         text-align: center;
+    }
+
+    .header .container .header-nav-web {
+        display: none;
+    }
+
+    .header .container .header-nav-mobile {
+        display: flex;
+        gap: 24px;
+    }
+
+    .header .container .header-nav-mobile i {
+        color: var(--color-sixth);
     }
 }
