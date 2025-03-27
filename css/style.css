@@ -1,0 +1,141 @@
+:root {
+    --color-body: #0d011d;
+    --color-primary: #fe01a0;
+    --color-third: #fff;
+    --color-fifth: #42f998;
+    --color-sixth: #d1d1d1;
+    --color-seventh: #8e8e8e;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: "Roboto Mono", monospace;
+    background-color: var(--color-body);
+    background-repeat: no-repeat;
+    background-image: 
+        radial-gradient(at 47% 47%, var(--color-primary) 0, transparent 59%), 
+        radial-gradient(at 82% 65%, var(--color-body) 0, transparent 55%);
+    height: 100%;
+    display: grid;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .header-logo {
+    width: 130px;
+    height: 40px;
+}
+
+.header .header-logo img {
+    width: 100%
+}
+
+.section .card {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(13, 1, 29, 0.50);
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(to right, var(--color-primary), var(--color-fifth), darkorchid) 1;
+}
+
+.section .card .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.section .card .card-body .card-title {
+    margin: 0;
+    color: var(--color-sixth);
+}
+
+.section .card .card-body .card-text {
+    margin: 0;
+    color: var(--color-seventh);
+}
+
+.section .card .card-body button {
+    background: none;
+    border: none;
+    padding: 14px;
+    text-decoration: none;
+    color: #42f998;
+    box-shadow: 0px 0px 13px -6px rgba(255,255,255,0.75);
+    border-radius: 24px;
+}
+
+.footer {
+    background-color: rgb(13, 1, 29, .55);
+}
+
+.footer .social-media {
+    display: flex;
+    gap: 24px;
+}
+
+.footer .social-media a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer .social-media a i {
+    color: var(--color-sixth);
+    font-size: 24px;
+}
+
+.footer .app-download {
+    display: flex;
+    gap: 24px;
+    justify-content: end;
+}
+
+.footer .copyright {
+    color: var(--color-sixth);
+    margin: 0;
+    font-size: 12px;
+    text-align: center;
+}
+
+.footer h6 {
+    color: var(--color-sixth);
+}
+
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer ul li {
+    font-size: 12px;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: var(--color-sixth);
+}
+
+@media screen and (max-width: 992px) {
+    .footer .social-media {
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+
+    .footer .app-download {
+        justify-content: center;
+    }
+}
