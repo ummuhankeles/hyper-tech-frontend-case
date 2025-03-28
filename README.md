@@ -23,3 +23,7 @@ Bu proje, Hyper Teknoloji frontend case çalışması için oluşturulmuş bir �
 ### API Kullanımı
 
 Ürün verileri Hyper Teknoloji API'sinden çekilmektedir.
+
+### LIVE
+
+[Frontend Case Live](https://ummuhankeles.github.io/hyper-tech-frontend-case/)
