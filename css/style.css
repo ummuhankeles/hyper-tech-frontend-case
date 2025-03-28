@@ -74,11 +74,37 @@ html, body {
     }
 }
 
+.section #searchInput {
+    border: none;
+    width: 100%;
+    border-radius: 24px;
+    height: 50px;
+    padding: 0 40px;
+    background-color: rgb(13, 1, 29, .55);
+    box-shadow: 0px 0px 24px -8px rgba(255,255,255,0.75);
+    color: var(--color-sixth);
+    outline: none;
+}
+
 .section .product-card {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 32px;
+}
+
+.section .product-card .not-found {
+    margin: auto;
+}
+
+.section .product-card .not-found img {
+    width: 100px;
+    height: 100px;
+}
+
+.section .product-card .not-found p {
+    color: var(--color-sixth);
+    margin: 0;
 }
 
 .section .card {
