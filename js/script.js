@@ -2,8 +2,6 @@ const API_URL = 'https://api.hyperteknoloji.com.tr/products/list';
 const API_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJMb2dpblR5cGUiOiIxIiwiQ3VzdG9tZXJJRCI6IjU1NzI0IiwiRmlyc3ROYW1lIjoiRGVtbyIsIkxhc3ROYW1lIjoiSHlwZXIiLCJFbWFpbCI6ImRlbW9AaHlwZXIuY29tIiwiQ3VzdG9tZXJUeXBlSUQiOiIzMiIsIklzUmVzZWxsZXIiOiIwIiwiSXNBUEkiOiIxIiwiUmVmZXJhbmNlSUQiOiIiLCJSZWdpc3RlckRhdGUiOiIzLzI1LzIwMjUgMTowMDo0OCBQTSIsImV4cCI6MjA1NDEzNDExMCwiaXNzIjoiaHR0cHM6Ly9oeXBlcnRla25vbG9qaS5jb20iLCJhdWQiOiJodHRwczovL2h5cGVydGVrbm9sb2ppLmNvbSJ9.i_pqc2C5vSh1IegikQTkSxYk6MsjALLzp4g30KXqunM';
 const API_KEY = 'de59806d4c0449f69f38a62c4e72874a';
 
-const productCard = document.querySelector('.product-card');
-
 async function fetchData() {
     try {
         const response = await fetch(API_URL, {
@@ -29,6 +27,10 @@ async function fetchData() {
 }
 
 function getProductList(productList) {
+    const productCard = document.querySelector('.product-card');
+    const loader = document.getElementById('loader');
+    loader.style.display = 'block';
+
     let items = '';
     productList.forEach(element => {
         items += `
@@ -41,8 +43,9 @@ function getProductList(productList) {
                 </div>
             </div>
         `
-        productCard.innerHTML = items;
     });
+    productCard.innerHTML = items;
+    loader.style.display = 'none';
 }
 
 fetchData();
